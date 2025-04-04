@@ -1,0 +1,15 @@
+<link name="tool0">
+    <visual>
+        <origin xyz="0.09 0.0 0.01" rpy="0.0 0.0 0.0"/>
+        <geometry>
+                <mesh filename="file_path" scale="0.001"/>
+        </geometry>
+        <material name="LightGrey"/>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="file_path" scale="0.001"/>
+        </geometry>
+        <origin xyz="0.09 0.0 0.01" rpy="0.0 0.0 0.0"/>
+    </collision>
+</link>

@@ -1,0 +1,112 @@
+    <link name="table">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="1 1.5 1"/>
+            </geometry>
+            <material name="LightGrey"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="1 1.5 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="table_joint" type="fixed">
+        <parent link="table"/>
+        <child link="$(prefix)base_link"/>
+        <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+    <link name="longbar">
+        <visual>
+            <origin xyz="0.4 0.5 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.04 0.04 1"/>
+            </geometry>
+            <color rgba="0.7 0.7 0.7 1.0"/>
+        </visual>
+        <collision>
+            <geometry>
+            <box size="0.04 0.04 1"/>   
+            </geometry>
+            <origin xyz="0.4 0.5 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <joint name="joint_name" type="fixed">
+        <origin xyz="0.4 0.5 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="table"/>
+        <child link="longbar"/>
+    </joint>
+
+    <link name="shortbar">
+        <visual>
+            <origin xyz="0.93 0.0 0.0" rpy="0.0 0.0 1.5708"/>
+            <geometry>
+                <box size="0.04 0.04 0.4"/>
+            </geometry>
+            <color rgba="0.7 0.7 0.7 1.0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.04 0.04 0.4"/>
+            </geometry>
+            <origin xyz="0.93 0.0 0.0" rpy="0.0 0.0 1.5708"/>
+        </collision>
+    </link>
+
+    <joint name="joint_name" type="fixed">
+        <origin xyz="0.93 0.0 0.0" rpy="0.0 0.0 1.5708"/>
+        <parent link="longbar"/>
+        <child link="shortbar"/>
+    </joint>
+    
+    
+    
+    
+#___________________________________________________________________________________________________________________________________________________________#    
+    
+    
+    
+    
+    <link name="$(prefix)tool0">
+      <visual>
+        <origin xyz="0.09 0.0 0.01" rpy="0.0 0.0 0.0"/>
+        <geometry>
+          <mesh filename="/home/ma6813/catkin_ws/src/universal_robot/ur_description/meshes/ur10e/visual/2f85.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="LightGrey"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="/home/ma6813/catkin_ws/src/universal_robot/ur_description/meshes/ur10e/collision/2f85.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <origin xyz="0.09 0.0 0.01" rpy="0.0 0.0 0.0"/>
+      </collision>
+    </link>
+    
+    <link name="table">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1 1.5 1"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1 1.5 1"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint name="table_joint" type="fixed">
+      <parent link="table"/>
+      <child link="$(prefix)base_link"/>
+      <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0"/>
+    </joint>

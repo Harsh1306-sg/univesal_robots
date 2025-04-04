@@ -1,0 +1,22 @@
+    <link name="longbar">
+        <visual>
+            <origin xyz="0.4 0.5 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.04 0.04 1"/>
+            </geometry>
+            <color rgba="0.7 0.7 0.7 1.0"/>
+        </visual>
+        <collision>
+            <geometry>
+            <box size="0.04 0.04 1"/>   
+            </geometry>
+            <origin xyz="0.4 0.5 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <joint name="joint_name" type="fixed">
+        <origin xyz="0.4 0.5 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="table"/>
+        <child link="longbar"/>
+    </joint>
+

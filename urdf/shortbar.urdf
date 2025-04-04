@@ -1,0 +1,22 @@
+<link name="shortbar">
+    <visual>
+        <origin xyz="0.93 0.0 0.0" rpy="0.0 0.0 1.5708"/>
+        <geometry>
+            <box size="0.04 0.04 0.4"/>
+        </geometry>
+        <color rgba="0.7 0.7 0.7 1.0"/>
+    </visual>
+    <collision>
+        <geometry>
+            <box size="0.04 0.04 0.4"/>
+        </geometry>
+        <origin xyz="0.93 0.0 0.0" rpy="0.0 0.0 1.5708"/>
+    </collision>
+</link>
+
+<joint name="joint_name" type="fixed">
+    <origin xyz="0.93 0.0 0.0" rpy="0.0 0.0 1.5708"/>
+    <parent link="longbar"/>
+    <child link="shortbar"/>
+</joint>
+
